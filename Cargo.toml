@@ -11,6 +11,7 @@ description = "Rust ECO system demo"
 [dependencies]
 anyhow = "1.0.85"
 console-subscriber = "0.2.0"
+http = "1.1.0"
 opentelemetry = "0.22.0"
 opentelemetry-otlp = { version = "0.15.0", features = ["tonic"] }
 opentelemetry_sdk = { version = "0.22.0", features = ["rt-tokio"] }
@@ -22,11 +23,14 @@ tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
 
 [dev-dependencies]
 axum = { version = "0.7.5", features = ["http2", "query", "tracing"] }
-chrono = "0.4.38"
+base64 = "0.22.1"
+chacha20poly1305 = "0.10.1"
+chrono = { version = "0.4.38", features = ["serde"] }
 derive_builder = "0.20.0"
 derive_more = "0.99.17"
 serde = { version = "1.0.202", features = ["derive"] }
 serde_json = "1.0.117"
+serde_with = "3.8.1"
 strum = { version = "0.26.2", features = ["derive"] }
 tokio = { version = "1.37.0", features = [
     "rt",
